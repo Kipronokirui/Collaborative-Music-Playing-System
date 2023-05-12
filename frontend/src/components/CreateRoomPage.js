@@ -11,7 +11,8 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 export default class CreateRoomPage extends Component {
-  defaultVotes = 2
+  defaultVotes = 2;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -23,6 +24,7 @@ export default class CreateRoomPage extends Component {
     this.handleVotesChange = this.handleVotesChange.bind(this);
     this.handleGuestCanPauseChange = this.handleGuestCanPauseChange.bind(this);
   }
+
   handleVotesChange(e) {
     this.setState({
       votesToSkip: e.target.value,
@@ -54,7 +56,7 @@ export default class CreateRoomPage extends Component {
       <Grid container spacing={1}>
         <Grid item xs={12} align="center">
           <Typography component="h4" variant="h4">
-            Create A Room
+            Create A Room You Wish
           </Typography>
         </Grid>
         <Grid item xs={12} align="center">
@@ -115,6 +117,5 @@ export default class CreateRoomPage extends Component {
         </Grid>
       </Grid>
     );
-
   }
 }
